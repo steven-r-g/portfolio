@@ -1,0 +1,172 @@
+html{
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-primary: 'Merriweather Sans', sans-serif;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 2rem;
+    --fs-body: 1rem;
+}
+
+.accordion__button{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #fff;
+}
+
+
+
+.accordion__button--active{
+    max-height: 100px;
+}
+
+.accordion__content{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s;
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 2rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1;
+
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    padding: 1em 2em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong{
+    font-weight: var(--fw-bold);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--ff-primary);
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1{
+    font-size: var(--fs-h1)
+}
+h2{
+    font-size: var(--fs-h2)
+}
+h3{
+    font-size: var(--fs-h3)
+}
+
+.links{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    margin-bottom: 15px;
+}
+
+.section__title{
+    margin-bottom: .25em;
+}
+
+.section__subtitle--intro{
+    font-weight: var(--fw-reg);
+}
+
+.section__subtitle--intro strong{
+    display: block;
+}
+
+.section__subtitle{
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--clr-accent);
+    font-family: var(--ff-secondary);
+}
+
+.intro {
+    position: relative;
+}
+
+.languages-grid{
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+}
+
+.projects-grid{
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns: 30% auto;
+    justify-items: start;
+}
+
+.project__description{
+    margin-left: 20px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.lang{
+    grid-column: 2;
+}
+
+.exp{
+    grid-row: 4;
+}
+
+p{
+    margin-block-start: .5em;
+    margin-block-end: .5em;
+}
+
+.about-me{
+    line-height: 1.5;
+}
